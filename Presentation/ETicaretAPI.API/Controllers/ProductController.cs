@@ -27,11 +27,9 @@ namespace ETicaretAPI.API.Controllers
         }
 
         [HttpGet]
-        public async Task Get()
+        public IActionResult Get()
         {
-            Order order = await _orderReadRepository.GetByIdAsync("3d78802d-73c3-4769-934a-db439bb39157");
-            order.Address = "Ankara";
-            await _orderWriteRepository.SaveAsync();
+            return Ok("selam");
         }
     }
 }
